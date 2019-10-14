@@ -1,0 +1,103 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-fieldset__legend--xl">
+        Pension estimate
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Beth Smith</span>
+      </h1>
+
+      <form action="/estimate" method="post">
+
+        {{ radios({
+            "idPrefix": "estimateHours",
+            "name": "estimateHours",
+            "fieldset": {
+                "legend": {
+                "text": "Would hours would you like to work?"
+                }
+            },
+            "items": [
+                {
+                "value": "ft",
+                "text": "Full-time"
+                },
+                {
+                "value": "pt",
+                "text": "Part-time"
+                }
+            ]
+        }) }}
+
+        {{ radios({
+            "idPrefix": "estimateBand",
+            "name": "estimateBand",
+            "fieldset": {
+                "legend": {
+                "text": "What salary band will you work at?"
+                }
+            },
+            "items": [
+                {
+                "value": "2",
+                "text": "Band 2"
+                },
+                {
+                "value": "3",
+                "text": "Band 3"
+                },
+                {
+                "value": "4",
+                "text": "Band 4"
+                },
+                {
+                "value": "5",
+                "text": "Band 5"
+                },
+                {
+                "value": "6",
+                "text": "Band 6"
+                },
+                {
+                "value": "7",
+                "text": "Band 7"
+                },
+                {
+                "value": "8",
+                "text": "Band 8"
+                },
+                {
+                "value": "9",
+                "text": "Band 9"
+                }
+            ]
+        }) }}
+
+        {# <p>
+          [Visit the 
+            <a href="https://beta.nhs.uk/service-manual/">NHS digital service manual</a> 
+          for guidance and examples.]
+        </p> #}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+
+      {# {{ backLink({
+        "href": "#",
+        "text": "Change my previous answer"
+      }) }} #}
+
+    </div>
+  </div>
+
+{% endblock %}

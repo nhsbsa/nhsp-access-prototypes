@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Getting a pension estimate, what date do you want to start taking your pension?
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="date" method="post">
+
+        {{ dateInput({
+            "id": "estimate-date",
+            "namePrefix": "estimateDate",
+            "fieldset": {
+                "legend": {
+                    "html":
+"<span role=text>    
+    <span class=nhsuk-caption-l nhsuk-caption--top>Getting a pension estimate</span>
+    What date do you want to start taking your pension?
+</span>",
+                    "classes": "nhsuk-fieldset__legend--l",
+                    "isPageHeading": true
+                }
+            },
+
+            "hint": {
+                "text": "For example, 31 3 2042",
+                "html": "<p>The earliest date you can start taking your pension is <strong class=nobr>15 March 2026</strong>, the latest date is <strong class=nobr>15 March 2046</strong>.</p><p>For example, 31 3 2042</p>"
+            },
+            "items": [
+                {
+                "name": "day",
+                "classes": "nhsuk-input--width-2"
+                },
+                {
+                "name": "month",
+                "classes": "nhsuk-input--width-2"
+                },
+                {
+                "name": "year",
+                "classes": "nhsuk-input--width-4"
+                }
+            ]
+        }) }}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+
+        {{ backLink({
+            "href": "start",
+            "text": "Go back"
+        }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Getting a pension estimate, when do you want to start taking your pension?
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="start" method="post">
+
+        {{ radios({
+            "idPrefix": "estimate-start",
+            "name": "estimateStart",
+            "fieldset": {
+                "legend": {
+                    "html":
+"<span role=text>    
+    <span class=nhsuk-caption-l nhsuk-caption--top>Getting a pension estimate</span>
+    When do you want to start taking <br>your pension?
+</span>",
+                    "classes": "nhsuk-fieldset__legend--l",
+                    "isPageHeading": true
+                }
+            },
+            "hint": {
+                "html": "<p>The time that you start taking your pension affects the amount of pension you can take as a one off lump sum.</p><p>You can change your answers later.</p>"
+            },
+            "items": [
+                {
+                    "value": "start-early",
+                    "text": "As early as possible",
+                    "html": "<strong>As early as possible</strong> <span>(age 55)</span>",
+                    "hint": {
+                        "text": "This is 15 March 2026. Starting earlier means your pension amount will be reduced."
+                    }
+                },
+                {
+                    "value": "start-normal",
+                    "text": "My normal pension date",
+                    "html": "<strong>My normal pension date</strong> <span>(age 67)</span>",
+                    "hint": {
+                        "text": "This is 15 March 2038."
+                    }
+                },
+
+                {
+                    "value": "start-age",
+                    "text": "At a specific age",
+                    "html": "<strong>At a specific age</strong>",
+                    "hint": {
+                        "text": "You can provide this on the next screen."
+                    }
+                },
+                {
+                    "value": "start-date",
+                    "text": "On a specific date",
+                    "html": "<strong>On a specific date</strong>",
+                    "hint": {
+                        "text": "You can provide this on the next screen."
+                    }
+                }
+            ]
+        }) }}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+
+        {{ backLink({
+            "href": "/hub",
+            "text": "Go back"
+        }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

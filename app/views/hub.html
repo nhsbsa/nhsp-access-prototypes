@@ -31,27 +31,28 @@
 
       <!-- Change the page title here -->
       <h1>
-        Welcome to the {{ serviceName }} prototype
-        <span class="nhsuk-caption-m nhsuk-caption--bottom">Beta</span>
+        Beth Smith
+        <span class="nhsuk-caption-m nhsuk-caption--bottom">QQ 12 34 56 A</span>
       </h1>
 
       <!-- Add your content here -->
-      <!-- Styles and components can be found at https://beta.nhs.uk/service-manual/styles-components-patterns -->
 
-      <h2>Choose your route</h2>
-      <ul>
-        <li><a href="hub">Pension Hub</a></li>
-        <li><a href="estimate">Pension estimate</a></li>
-      </ul>
+      <section>
 
-      <hr>
+        {{ promo({
+          "classes": "nhsuk-promo--small",
+          "href": "estimate/start",
+          "heading": "Get a pension estimate",
+          "description": "See how much your pension could be when you retire."
+        }) }}
 
-      <ul>
-        {# <li><a href="/screens">View screen index</a></li> #}
-        <li>Get started with <a href="/docs">how to guides and page templates</a></li>
-        <li>Copy and paste styles and components from the <a href="https://beta.nhs.uk/service-manual/styles-components-patterns">NHS digital service manual</a></li>
-        <li>NHS.UK Frontend <a href="https://github.com/nhsuk/nhsuk-frontend">GitHub</a></li>
-      </ul>
+        {{ promo({
+          "classes": "nhsuk-promo--small",
+          "href": "details",
+          "heading": "View your personal details",
+          "description": "Check the personal details we hold for you."
+        }) }}
+      </section>
 
       <!-- End of content -->
 

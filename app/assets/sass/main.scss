@@ -8,3 +8,36 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
+
+.nobr {
+    white-space: nowrap;
+}
+
+.invert-panel {
+    background-color:#005eb8;
+    padding: 20px 30px;
+    color: #fff;
+    a {
+        color: #fff;
+        &:hover,
+        &:focus {
+            color: #212b32;
+        }
+    }
+}
+
+.no-margin {
+    @include mq($from: desktop) {
+        margin-top:0; margin-bottom: 0;
+    }
+}
+
+.nhsuk-care-card {
+    margin-top: 0;
+}
+
+.br-sm {
+    @include mq($from: desktop) {
+        display: none;
+    }
+}

@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Getting a pension estimate, do you want to add a life event?
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="event" method="post">
+
+{{ radios({
+  "idPrefix": "estimate-event",
+  "name": "estimateEvent",
+  "fieldset": {
+    "legend": {
+        "html":
+"<span role=text>    
+    <span class=nhsuk-caption-l nhsuk-caption--top>Getting a pension estimate</span>
+    Do you want to add a life event?
+</span>",
+        "classes": "nhsuk-fieldset__legend--l",
+        "isPageHeading": true
+    }
+  },
+  "hint": {
+    "html": "<p>You can add life events such as a change in working hours or a change in salary to your estimate to work out how it might affect your pension.</p>
+    <p>You can change your answers later.</p>"
+  },
+  "items": [
+    {
+      "value": "yes",
+      "text": "Yes, add an event"
+    },
+    {
+      "value": "no",
+      "text": "No, skip this for now"
+    }
+  ]
+}) }}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+
+        {{ backLink({
+            "href": "start",
+            "text": "Change my previous answer"
+        }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

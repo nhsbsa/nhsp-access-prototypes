@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Getting a pension estimate, what age do you want to start taking your pension?
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="age" method="post">
+
+        <h1 class="nhsuk-heading-l">
+          <span role="text">    
+            <span class="nhsuk-caption-l nhsuk-caption--top">Getting a pension estimate</span>
+            What age do you want to start taking your pension?
+          </span>
+        </h1>
+        {{ hint({
+          "html": "<p>The earliest age you can start taking your pension is <strong>55</strong>, the latest age is <strong class=nobr>75</strong>.</p>"
+        }) }}
+
+        {{ input({
+          "label": {
+            "text": "Enter an age"
+          },
+          "id": "estimate-age",
+          "namePrefix": "estimateAge",
+          "classes": "nhsuk-input--width-3",
+          "hint": {
+            "text": "For example, 63"
+          }
+        }) }}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+
+        {{ backLink({
+            "href": "start",
+            "text": "Go back"
+        }) }}
+
+    </div>
+  </div>
+
+{% endblock %}
