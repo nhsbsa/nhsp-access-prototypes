@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Getting a pension estimate, do you want to add a life event?
+  Getting a pension estimate, have you changed your working hours since 31 March 2019?
 {% endblock %}
 
 {% block content %}
@@ -18,24 +18,23 @@
         "html":
 "<span role=text>    
     <span class=nhsuk-caption-l nhsuk-caption--top>Getting a pension estimate</span>
-    Do you want to add a life event?
+    Have you changed your working hours since 31 March 2019?
 </span>",
         "classes": "nhsuk-fieldset__legend--l",
         "isPageHeading": true
     }
   },
   "hint": {
-    "html": "<p>You can add life events such as a change in working hours or a change in salary to your estimate to work out how it might affect your pension.</p>
-    <p>You can change your answers later.</p>"
+    "html": "<p>You can change your answers later.</p>"
   },
   "items": [
     {
       "value": "yes",
-      "text": "Yes, add an event"
+      "text": "Yes I have"
     },
     {
       "value": "no",
-      "text": "No, skip this for now"
+      "text": "No I haven't"
     }
   ]
 }) }}

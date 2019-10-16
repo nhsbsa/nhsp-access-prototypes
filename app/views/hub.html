@@ -28,38 +28,57 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
+      <h1>Beth Smith <span class="nhsuk-caption-m nhsuk-caption--bottom">QQ 12 34 56 A</span></h1>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <a href="#" style="float: right;">Sign out</a>
+    </div>
+  </div>
 
-      <!-- Change the page title here -->
-      <h1>
-        Beth Smith
-        <span class="nhsuk-caption-m nhsuk-caption--bottom">QQ 12 34 56 A</span>
-      </h1>
-
-      <!-- Add your content here -->
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
 
       <section>
 
         {{ promo({
-          "classes": "nhsuk-promo--small",
           "href": "estimate/start",
           "heading": "Get a pension estimate",
           "description": "See how much your pension could be when you retire."
         }) }}
 
         {{ promo({
-          "classes": "nhsuk-promo--small",
-          "href": "details",
+          "href": "#",
           "heading": "View your personal details",
           "description": "Check the personal details we hold for you."
+        }) }}
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Your choices</h2>
+        {{ promo({
+          "href": "#",
+          "heading": "Name a beneficiary",
+          "description": "Nominate one or many people or organisations to receive your pension if you die."
+        }) }}
+
+        {{ promo({
+          "href": "#",
+          "heading": "Transfer a pension",
+          "description": "You can transfer in from another pension scheme registered with HM Revenue & Customs (HMRC)."
+        }) }}
+
+        {{ promo({
+          "href": "#",
+          "heading": "Leave the pension scheme",
+          "description": "Learn about what you would lose if you decide to leave or take a break from your NHS pension."
         }) }}
       </section>
 
       <!-- End of content -->
 
     </div>
+
   </div>
-{% endblock %}
-
-{% block footer %}
-
 {% endblock %}
