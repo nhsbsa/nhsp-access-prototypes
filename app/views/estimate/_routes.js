@@ -8,22 +8,22 @@ router.post('/start', function (req, res) {
     } else if (estimate === 'start-date') {
         res.redirect('date')
     } else {
-      res.redirect('event')
+      res.redirect('change-past-hours')
     }
 })
 
 router.post('/age', function (req, res) {
-    res.redirect('event');
+    res.redirect('change-past-hours');
 })
 
 router.post('/date', function (req, res) {
-    res.redirect('event');
+    res.redirect('change-past-hours');
 })
 
-router.post('/event', function (req, res) {
+router.post('/change-past-hours', function (req, res) {
     var event = req.body['estimateEvent'];
     if(event === 'yes') {
-      res.redirect('add-event')
+      res.redirect('past-hours')
     } else {
       res.redirect('/estimate')
     }

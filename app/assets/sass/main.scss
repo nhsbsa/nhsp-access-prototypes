@@ -4,7 +4,7 @@
 // Components that are not in the NHS.UK frontend library
 @import 'components/panel-confirmation';
 @import 'components/related-nav';
-
+@import 'components/summary-list';
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
@@ -40,4 +40,59 @@
     @include mq($from: desktop) {
         display: none;
     }
+}
+
+.nhsuk-header__navigation-item--sign-out {
+    margin-left: auto;
+}
+
+
+.nhsuk-header__container {
+    display: flex;
+    
+    
+    flex-direction: column;
+    @include mq($from: desktop) {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+}
+.nhsuk-header__content-nav {
+    display: flex;
+    align-items: center;
+    @include mq($until: tablet) {
+        margin-left: 16px;
+    }
+
+    &__id {
+        color: #fff;
+    }
+
+    a {
+        color: #fff;
+        &:hover {
+            background-color: #003d78;
+        }
+    }
+    .nhsuk-header__navigation-link {
+        display: inline-block;
+        margin-left: auto;
+        @include mq($from: desktop) {
+            margin-left: 16px;
+        }
+    }
+}
+
+.nhsuk-header__link--service {
+    align-items: center;
+    display: flex;
+    margin-bottom: 0;
+    width: auto;
+}
+
+.nhsuk-header__service-name {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 0;
 }

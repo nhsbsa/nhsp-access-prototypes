@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'signed-in.html' %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -15,10 +15,6 @@
   {{ serviceName }}
 {% endblock %}
 
-{# {% block header %}
-
-{% endblock %} #}
-
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
 {% endblock %}
@@ -28,10 +24,7 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <h1>Beth Smith <span class="nhsuk-caption-m nhsuk-caption--bottom">QQ 12 34 56 A</span></h1>
-    </div>
-    <div class="nhsuk-grid-column-one-third">
-      <a href="#" style="float: right;">Sign out</a>
+      <h1 class="nhsuk-heading-l">Your pension</h1>
     </div>
   </div>
 
@@ -47,9 +40,9 @@
         }) }}
 
         {{ promo({
-          "href": "#",
+          "href": "details",
           "heading": "View your personal details",
-          "description": "Check the personal details we hold for you."
+          "description": "Check the personal details we have for you."
         }) }}
       </section>
 

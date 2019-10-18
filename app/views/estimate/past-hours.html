@@ -1,0 +1,110 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Getting a pension estimate, have you changed your working hours since 31 March 2019?
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="past-hours" method="post">
+
+        <h1 class="nhsuk-heading-l">
+            <span role=text>    
+                <span class=nhsuk-caption-l nhsuk-caption--top>Getting a pension estimate</span>
+                Tell us about the change
+            </span>
+        </h1>
+
+        {{ hint({
+            "html": "<p>You can change your answers later.</p>"
+        }) }}
+
+{{ dateInput({
+  "id": "estimate-past-hours-start",
+  "namePrefix": "estimatePastHoursStart",
+  "fieldset": {
+    "legend": {
+        "text": "When did the change in working hours start?",
+        "classes": "nhsuk-fieldset__legend--m"
+    }
+  },
+  "items": [
+    {
+    "name": "day",
+    "classes": "nhsuk-input--width-2"
+    },
+    {
+    "name": "month",
+    "classes": "nhsuk-input--width-2"
+    },
+    {
+    "name": "year",
+    "classes": "nhsuk-input--width-4"
+    }
+  ]
+}) }}
+
+{{ dateInput({
+  "id": "estimate-past-hours-end",
+  "namePrefix": "estimatePastHoursEnd",
+  "fieldset": {
+    "legend": {
+        "text": "When did the change in working hours end?",
+        "classes": "nhsuk-fieldset__legend--m"
+    }
+  },
+  "items": [
+    {
+    "name": "day",
+    "classes": "nhsuk-input--width-2"
+    },
+    {
+    "name": "month",
+    "classes": "nhsuk-input--width-2"
+    },
+    {
+    "name": "year",
+    "classes": "nhsuk-input--width-4"
+    }
+  ]
+}) }}
+
+{{ radios({
+  "idPrefix": "estimate-past-hours-time",
+  "name": "estimatePastHoursTime",
+  "fieldset": {
+    "legend": {
+        "text": "legend",
+        "classes": "nhsuk-fieldset__legend--m"
+    }
+  },
+  "items": [
+    {
+      "value": "full",
+      "text": "Full-time"
+    },
+    {
+      "value": "part",
+      "text": "Part-time"
+    }
+  ]
+}) }}
+
+        {{ button({
+          "text": "Continue",
+          "id": "btn_submit"
+        }) }}
+
+      </form>
+
+        {{ backLink({
+            "href": "start",
+            "text": "Change my previous answer"
+        }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

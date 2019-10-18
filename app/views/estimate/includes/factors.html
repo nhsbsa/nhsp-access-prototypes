@@ -1,0 +1,70 @@
+<hr>
+<h3 class="heading-medium" style="margin-bottom:0;">How past and future things shape the amount you could get</h3>
+
+    <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-one-third">
+
+        {{ careCard({
+            "type": "non-urgent",
+            "heading": "Increase it",
+            "HTML": "
+            <ul>
+            <li>Time served</li>
+            <li>Salary increase</li>
+            <li>Retire 1 year later</li>
+            <li>State pension</li>
+            </ul>
+            "
+        }) }}
+
+    </div>
+
+    <div class="nhsuk-grid-column-one-third">
+
+        {{ careCard({
+        "type": "non-urgent",
+        "heading": "No change",
+        "HTML": "
+        <ul>
+        <li>NHS Staff discounts</li>
+        <li>12 months maternity leave</li>
+        <li>Bonus payments</li>
+        </ul>
+        "
+    }) }}
+
+    </div>
+
+    <div class="nhsuk-grid-column-one-third">
+
+        {{ careCard({
+    "type": "urgent",
+    "heading": "Reduce it",
+    "HTML": "
+    <ul>
+        <li>Part-time for 2 years</li>
+        <li>NHS Lease car</li>
+        <li>Cycle to work scheme</li>
+        <li>Childcare vouchers</li>
+    </ul>
+    "
+    }) }}
+
+        {# {{ list({
+            "title": "Reduce it",
+            "type": "cross",
+            "items": [
+                {
+                "item": "Part-time for 2 years"
+                },
+                {
+                "item": "NHS Lease car"
+                }
+            ]
+            }) }} #}
+
+    </div>
+    <hr>
+
+    </div>

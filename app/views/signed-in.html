@@ -1,0 +1,23 @@
+{% from "macros.njk" import pensionsHeader %}
+{% from "macros.njk" import govukSummaryList %}
+
+{% extends 'layout.html' %}
+
+{% block header %}
+{{ pensionsHeader({
+    "service": {
+      "name": "Your NHS Pension",
+      "href": "/"
+    },
+    "showNav": "true",
+    "secondaryLinks": [
+      {
+        'url' : '#',
+        'label' : 'Sign out'
+      }
+    ],
+    "id": "Beth Smith",
+    "nino": "QQ 12 34 56 A"
+  })
+}}
+{% endblock %}
