@@ -1,7 +1,11 @@
 var express = require('express')
 var router = express.Router()
 
-router.post('/start', function (req, res) {
+router.get('/', function (req, res) {
+  res.redirect('estimate/15');
+})
+
+router.post('/when', function (req, res) {
     var estimate = req.body['estimateStart'];
     if(estimate === 'start-age') {
       res.redirect('age')

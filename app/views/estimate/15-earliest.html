@@ -1,0 +1,101 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'signed-in.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Pension estimate
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      {{ backLink({
+        "href": "/hub",
+        "text": "Go back"
+      }) }}
+
+      <!-- Change the page title here -->
+      <h1 class="nhsuk-heading-xl">Your NHS pension estimate</h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://beta.nhs.uk/service-manual/styles-components-patterns -->
+
+      {% include "estimate/includes/lead-in.html" %}
+
+      <ol class="bsa-timeline">
+
+
+          <li class="bsa-timeline__entry bsa-timeline__entry--dash">
+              <h3 class="bsa-timeline__title">Age 55</h3>
+              <p class="bsa-timeline__info">
+                  <span>You could get</span>
+                  <span class="bsa-timeline__value nhsuk-heading-xl">£354</span>
+                  <span>a month</span>
+              </p>
+              <p class="bsa-timeline__body">
+                with a lump sum of <strong>£28,296</strong>. <br><a href="#">Change this</a>
+              </p>
+          </li>
+          <li class="bsa-timeline__entry ">
+              <h3 class="bsa-timeline__title">Age 67</h3>
+              <p class="bsa-timeline__info">
+                  <span>At normal pension age you could get</span>
+                  <span class="bsa-timeline__value nhsuk-heading-xl">£1,939</span>
+                  <span>a month</span>
+              </p>
+              <p class="bsa-timeline__body">
+                  with a lump sum of <strong>£114,740</strong>. <br><a href="#">Change this</a>
+              </p>
+          </li>
+      </ol>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-three-quarters">
+          <p>Your pension would start on the <strong class="nobr">15th March 2030</strong>. This is the earliest you can start taking your pension. <a href="when">Change this</a>.</p>
+        </div>
+      </div>
+
+          {# {% include "estimate/includes/estimate-panel.html" %} #}
+
+    </div>
+  </div>
+
+  <hr>
+  
+  {% include "estimate/includes/disclaimer.html" %}
+
+        {# {% include "estimate/includes/about-employment.html" %} #}
+
+      {% include "estimate/includes/factors.html" %}
+
+        <hr>
+
+        {{ backLink({
+          "href": "/hub",
+          "text": "Go back"
+        }) }}
+
+
+    </div>
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
