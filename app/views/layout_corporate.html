@@ -1,0 +1,513 @@
+{% block top_of_page %}{% endblock %}
+<!doctype html>
+<!--[if IE 7]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8 ie7"><![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie10 lt-ie9 ie8"><![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10 ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js"  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+    <!--<![endif]-->
+    <head>
+
+        <!-- meta data -->
+        <meta charset="utf-8"/>
+        <meta name="title" content="Employee section | NHSBSA"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="description" content="Total Rewards Statements and Annual Benefits Statements for employees"/>
+        <meta name="abstract" content="Total Rewards Statements and Annual Benefits Statements for employees"/>
+        <meta name="keywords" content="total, rewards, annual, benefits, statements, employee, section, TRS, ABS"/>
+        <meta name="referrer" content="no-referrer"/>
+        <meta name="Generator" content="Drupal 8 (https://www.drupal.org)"/>
+        <meta name="MobileOptimized" content="width"/>
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="shortcut icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon"/>
+        <link rel="alternate" hreflang="en" href="https://www.nhsbsa.nhs.uk/employee-section"/>
+        <link rel="canonical" href="https://www.nhsbsa.nhs.uk/employee-section"/>
+        <link rel="shortlink" href="https://www.nhsbsa.nhs.uk/node/865"/>
+
+        <meta name="viewport"
+          content="initial-scale=1.0, width=device-width"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>
+            {% block page_title %}{% endblock %}
+        </title>
+
+        <!-- Stylesheet includes -->
+        <link rel="stylesheet" media="all" href="{{ data['corp_site_path'] }}core/themes/stable/css/system/components/system-status-counter.css?q9knw1"/>
+        <link rel="stylesheet" media="all" href="{{ data['corp_site_path'] }}core/themes/stable/css/system/components/system-status-report-counters.css?q9knw1"/>
+        <link rel="stylesheet" media="all" href="{{ data['corp_site_path'] }}core/themes/stable/css/system/components/system-status-report-general-info.css?q9knw1"/>
+        <link rel="stylesheet" media="all" href="{{ data['corp_site_path'] }}modules/contrib/cacheflush/css/cacheflush.menu.css?q9knw1"/>
+
+        <!--[if (gte IE 10)|(!IE)]><!-->
+        <link rel="stylesheet" href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/assets/css/a.css" media="all">
+        <!--<![endif]-->
+        <!--[if lt IE 10]>
+    <link rel="stylesheet" href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/assets/css/b.css" media="all" />
+    <![endif]-->
+
+        <!-- JavaScript includes -->
+
+        <!--[if lte IE 8]>
+<script src="{{ data['corp_site_path'] }}core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+
+        <!-- Favicons | Icons -->
+        <link rel="apple-touch-icon"      sizes="57x57"     href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon"      sizes="60x60"     href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon"      sizes="72x72"     href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon"      sizes="76x76"     href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon"      sizes="114x114"   href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon"      sizes="120x120"   href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon"      sizes="144x144"   href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon"      sizes="152x152"   href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon"      sizes="180x180"   href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"   href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="96x96"     href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="32x32"     href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16"     href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/favicon-16x16.png">
+
+        <link rel="manifest" href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/manifest.json">
+        <link rel="SHORTCUT ICON" href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/favicon.ico">
+        <link rel="shortcut icon" href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/favicon.ico">
+        <link rel="icon" type="image/icon" href="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/mstile-144x144.png">
+        <meta name="msapplication-config" content="{{ data['corp_site_path'] }}themes/custom/nhsbsa/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+    </head>
+
+    <body class="nhs-blue path-node page-node-type-section-page" id="top">
+        <!-- Accessibility links -->
+        <div id="skip-to-content">
+            <a href="#main-content" tabindex="1" class="element-invisible element-focusable" title="Skip to main content" accesskey="c">Skip to main content</a>
+            <a href="#main-footer" tabindex="2" class="element-invisible element-focusable" title="Skip to footer" accesskey="f">Skip to footer</a>
+        </div>
+
+        <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+            <div class="page">
+                <header id="main-header" class="main_header">
+                    <div class="container">
+                        <div class="header-row">
+
+                            <div class="header-logo site-logo">
+                                <a href="/" title="Home" rel="home" class="site-logo-link">
+                                    <img src="{{ data['corp_site_path'] }}themes/custom/nhsbsa/images/NHSBSA.gif" 
+           width="356px" 
+           height="77px" 
+           alt="NHS Business Services Authority" 
+           class="site-logo-image  "/>
+                                    <span class="sr-only">NHSBSA </span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </header>
+
+                <main id="main-content" class="main_body">
+
+                    <div class="content-header sm-mt-40 mt-20">
+                        <div class="container">
+                            <div class="row is-just-between sm-is-direction-row is-direction-column ie-text-right">
+                                <div class="column sm-is-none is-auto ie-is-inline-block ie-is-8 ie-text-left">
+                                    <div class="service-name-wrapper">
+                                        <a href="/total-reward-statements" class="service-name"> Total Reward Statements</a>
+                                    </div>
+                                    <button class="js-search-toggle search-toggle show-from-sm ie-is-hidden">
+                                        <span class="sr-only">Toggle search</span>
+                                    </button>
+                                </div>
+                                <div class="column sm-is-none is-auto search-column ie-is-inline-block ie-is-4">
+                                    <div class="js-search-controller search-controller">
+                                        <div class="js-search-container">
+                                            <div class="views-exposed-form bef-exposed-form section_page" data-drupal-selector="views-exposed-form-search-search-block" id="block-exposedformsearchsearch-block" title="Employee section" URL="www.nhsbsa.nhs.uk%2Femployee-section">
+
+                                                <div class="search-block-form searchBar">
+                                                    <form block="block-exposedformsearchsearch-block" action="/search" method="get" id="views-exposed-form-search-search-block" accept-charset="UTF-8">
+                                                        <div class="js-form-item form-item js-form-type-textfield form-item-aggregated-field js-form-item-aggregated-field">
+                                                            <label for="edit-aggregated-field">Search</label>
+                                                            <input placeholder="Search the NHSBSA website" data-drupal-selector="edit-aggregated-field" type="text" id="edit-aggregated-field" name="aggregated_field" value="" size="30" maxlength="128" class="form-text"/>
+
+                                                        </div>
+                                                        <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+                                                            <div class="submit-controller">
+                                                                <button  data-drupal-selector="edit-submit-search" type="submit" id="edit-submit-search" value="Search" class="button js-form-submit form-submit">
+                                                                    <span class="submit-inner">Search</span></button>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row md-mb-40 mb-20 md-mt--10">
+                                <div class="column is-12">
+                                    <div id="block-custommenu" class="section_page" title="Employee section" URL="www.nhsbsa.nhs.uk%2Femployee-section">
+
+                                        <nav class="service-nav hide-from-md">
+                                            <ul block="block-custommenu" class="nav">
+                                                <li class="nav-item nav-item--expanded menu-item--active-trail">
+                                                    <a href="/employee-section" title="Employee section" data-drupal-link-system-path="node/865" class="is-active">Employee section</a>
+                                                    <ul class="nav">
+                                                        <li class="nav-item menu-item--collapsed">
+                                                            <a href="/employee-section/what-type-statement-will-i-receive" title="What type of statement will I receive?" data-drupal-link-system-path="node/867">What type of statement will I receive?</a>
+                                                        </li>
+                                                        <li class="nav-item menu-item--collapsed">
+                                                            <a href="/employee-section/understanding-my-statement" title="Understanding my statement" data-drupal-link-system-path="node/863">Understanding my statement</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a href="/employee-section/contact-trs-employees" title="Contact TRS - employees" data-drupal-link-system-path="node/881">Contact TRS - employees</a>
+                                                        </li>
+                                                    </ul>
+
+                                                </li>
+                                                <li class="nav-item nav-item--expanded">
+                                                    <a href="/employer-toolkit" title="Employer toolkit" data-drupal-link-system-path="node/866">Employer toolkit</a>
+                                                    <ul class="nav">
+                                                        <li class="nav-item">
+                                                            <a href="/employer-toolkit/your-employer-do-list" title="Your to do list" data-drupal-link-system-path="node/869">Your to do list</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a href="/employer-toolkit/promoting-statements" title="Promoting the statements" data-drupal-link-system-path="node/868">Promoting the statements</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a href="/employer-toolkit/contact-trs-employers" title="Contact TRS - employers" data-drupal-link-system-path="node/882">Contact TRS - employers</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a href="/employer-toolkit/trs-employer-news" data-drupal-link-system-path="node/870">TRS - Employer news</a>
+                                                        </li>
+                                                    </ul>
+
+                                                </li>
+                                            </ul>
+                                        </nav>
+
+                                    </div>
+
+                                    <nav class="service-nav-mobile show-from-md ie-is-hidden">
+                                        <div class="js-mobile-menu-container is-hidden">
+                                            <nav class="navigation">
+
+                                                <ul class="menu depth-0">
+                                                    <li class="menu-item menu-item--expanded menu-item--active-trail">
+                                                        <a href="/employee-section" title="Employee section" class="link-level-0 is-active" data-drupal-link-system-path="node/865">Employee section</a>
+                                                        <ul class="menu depth-1">
+                                                            <li class="menu-item menu-item--collapsed">
+                                                                <a href="/employee-section/what-type-statement-will-i-receive" title="What type of statement will I receive?" class="link-level-1" data-drupal-link-system-path="node/867">What type of statement will I receive?</a>
+                                                            </li>
+                                                            <li class="menu-item menu-item--collapsed">
+                                                                <a href="/employee-section/understanding-my-statement" title="Understanding my statement" class="link-level-1" data-drupal-link-system-path="node/863">Understanding my statement</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="/employee-section/contact-trs-employees" title="Contact TRS - employees" class="link-level-1" data-drupal-link-system-path="node/881">Contact TRS - employees</a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="/employer-toolkit" title="Employer toolkit" class="link-level-0" data-drupal-link-system-path="node/866">Employer toolkit</a>
+                                                        <ul class="menu depth-1"></ul>
+
+                                                    </li>
+                                                </ul>
+
+                                            </nav>
+                                        </div>
+
+                                        <button type="button" name="toggleMobileNav"
+                          class="menu-toggle js-menu-toggle">Employee section</button>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contextual-tabs"></div>
+
+                    <div class="content-row">
+                        <div class="container tablet-mb-65 mb-25">
+                            <div class="row mt--15">
+                                <div class="column is-block lg-is-8 is-12 ie-is-8">
+                                    <div data-drupal-messages-fallback class="hidden"></div>
+                                    <div id="block-pagetitle" class="section_page" title="Employee section" URL="www.nhsbsa.nhs.uk%2Femployee-section">
+
+                                        <h1>Employee section</h1>
+
+                                    </div>
+
+                                    {% block main %}
+
+                                    {% endblock %}
+                                </div>
+                                <div class="column is-block is-normal lg-is-4 is-12 ie-is-4">
+                                    <div class="row is-direction-column">
+                                        <div class="column is-block is-normal is-12 ie-is-12 hide-from-md">
+                                            <nav class="breadcrumb sidebar-nav" role="navigation" aria-labelledby="system-breadcrumb">
+                                                <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+                                                <ul>
+                                                    <li class=" menu-item active menu-item--expanded level-0">
+                                                        <a href="/employee-section">Employee section</a>
+                                                    </li>
+                                                    <li class="menu-item-child">
+                                                        <a href="/employee-section/what-type-statement-will-i-receive">What type of statement will I receive?</a>
+                                                    </li>
+                                                    <li class="menu-item-child">
+                                                        <a href="/employee-section/understanding-my-statement">Understanding my statement</a>
+                                                    </li>
+                                                    <li class="menu-item-child">
+                                                        <a href="/employee-section/contact-trs-employees">Contact TRS - employees</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+
+                                        </div>
+
+                                        <div class="column is-normal is-12 ie-is-12">
+                                            <div class="sidebar-link-block">
+                                                <a href="confirm-identity" target="_blank" title="Go to Log in to TRS" class="sidebar-link-block-button">
+                                                    <span class="is-external">Log in to TRS</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="column is-normal is-12 ie-is-12">
+                                            <div class="social-links-block has-1-items">
+                                                <span>Follow us</span>
+                                                <ul class="social-list">
+                                                    <li>
+                                                        <a href="https://twitter.com/nhs_pensions" title="Go to Twitter NHS Pensions" target="_blank">Twitter NHS Pensions</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="column is-normal is-12 ie-is-12">
+                                            <div class="question-block">
+                                                <h3>Got a question?</h3>
+                                                <ul class="link-list">
+                                                    <li>
+                                                        <a href="https://contactcentreservices.nhsbsa.nhs.uk/selfnhsukokb/AskUs_Pensions/template-group.do?name=Total+Reward+Statements&amp;id=5171" target="_blank" title="Go to Visit our knowledge base" class="is-external">Visit our knowledge base</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="block-relatedblock" class="section_page" title="Employee section" URL="www.nhsbsa.nhs.uk%2Femployee-section">
+
+                        <div class="flexible-content-row">
+                            <div class="container tablet-pt-45 pt-25 table-pb-45 pb-25 has-border-top-large">
+                                <div class="flexible-content-row-content row">
+                                    <div class="column sm-is-4 is-12 ie-is-4">
+                                        <div class="resource-link-block">
+                                            <h3>How Total Reward and Annual Benefit Statements are produced</h3>
+                                            <ul class="document-list">
+                                                <li class="pdf">
+                                                    <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2017-02/Timeline%20infographic.pdf" title="Go to TRS Timeline infographic">TRS Timeline infographic <span class="size">(236.31kB)</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="column sm-is-4 is-12 ie-is-4">
+                                        <div class="link-list-block">
+                                            <h3>YouTube channel</h3>
+                                            <ul class="link-list">
+                                                <li>
+                                                    <a href="https://www.youtube.com/playlist?list=PLfGVyv6pTeuZxPxbxA3gPX43OGrXIqsO3" target="_blank" class="is-external" title="Go to View our TRS videos on YouTube">View our TRS videos on YouTube</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="block-relatedblock-2" class="section_page" title="Employee section" URL="www.nhsbsa.nhs.uk%2Femployee-section"></div>
+                    <div class="service-area-footer bg-white mr--15 ml--15 pl-20 pr-20 tablet-pt-50 pt-15 tablet-pb-50 pb-15">
+                        <div class="container tablet-pb-60 pb-25">
+                            <div block="block-service-footer-blocks">
+                                <div class="row view view-service-footer-v1 view-id-service_footer_v1 view-display-id-block_1 js-view-dom-id-828ebf2806acd16f2803d8d2dc687343b9a9c6dbaf43ed1172caf1a2e189a440">
+                                    <div class="column tablet-is-4 sm-is-6 is-12 ie-is-4">
+                                        <div class="serviceFooterBlock">
+                                            <h3 class="serviceFooterBlock-title">
+                                                <a href="/help-us-improve-our-website">Help us improve our website</a>
+                                            </h3>
+                                            <p>We’re still developing our website based on your feedback, so please tell us what you think.</p>
+                                            <a href="/help-us-improve-our-website" class="serviceFooterBlock-link">Read more</a>
+                                        </div>
+                                    </div>
+                                    <div class="column tablet-is-4 sm-is-6 is-12 ie-is-4">
+                                        <div class="serviceFooterBlock">
+                                            <h3 class="serviceFooterBlock-title">
+                                                <a href="/member-hub">Member hub</a>
+                                            </h3>
+                                            <p>Information for members of the NHS Pension Scheme</p>
+                                            <a href="/member-hub" class="serviceFooterBlock-link">Read more</a>
+                                        </div>
+                                    </div>
+                                    <div class="column tablet-is-4 sm-is-6 is-12 ie-is-4">
+                                        <div class="serviceFooterBlock">
+                                            <h3 class="serviceFooterBlock-title">
+                                                <a href="/employer-hub">Employer hub</a>
+                                            </h3>
+                                            <p>Information for employers of the NHS Pension Scheme</p>
+                                            <a href="/employer-hub" class="serviceFooterBlock-link">Read more</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="site-back-to-top-wrapper show-from-md ie-is-hidden">
+                        <a href="#top" class="site-back-to-top">Back to top</a>
+                    </div>
+
+                </main>
+
+                <footer id="main-footer" class="main_footer">
+                    <div class="footer-wrap">
+                        <div class="container">
+                            <div class="footer-row footer-primary-row">
+
+                                <div class="header-supporting">
+                                    <nav role="navigation" aria-labelledby="block-footerprimary-menu"  id="block-footerprimary">
+
+                                        <h2 class="visually-hidden" id="block-footerprimary-menu">Footer primary </h2>
+
+                                        <ul class="primary-footer-nav">
+                                            <li class="primary-footer-nav-item">
+                                                <a href="/welcome" title="Go to the homepage of our website" data-drupal-link-system-path="node/18">NHSBSA Home</a>
+                                            </li>
+                                            <li class="primary-footer-nav-item">
+                                                <a href="/sitemap" data-drupal-link-system-path="sitemap">Sitemap</a>
+                                            </li>
+                                            <li class="primary-footer-nav-item">
+                                                <a href="/our-policies/accessibility" data-drupal-link-system-path="node/887">Accessibility</a>
+                                            </li>
+                                            <li class="primary-footer-nav-item">
+                                                <a href="/contact-us" title="Find the contact details for each of our services" data-drupal-link-system-path="node/735">Contact us</a>
+                                            </li>
+                                            <li class="primary-footer-nav-item">
+                                                <a href="/what-we-do/work-us" title="Recruitment" data-drupal-link-system-path="node/610">Work for us</a>
+                                            </li>
+                                        </ul>
+
+                                    </nav>
+                                </div>
+
+                                <div class="footer-logo site-logo">
+                                    <a href="/" title="Home" class='site-logo-link'>
+                                        <img src="{{ data['corp_site_path'] }}themes/custom/nhsbsa/images/NHSBSA.gif"
+                     width="329px"
+                     height="71px"
+                     alt="NHS Business Services Authority"
+                     class="site-logo-image"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-row footer-secondary-row">
+                            <div class="container">
+
+                                <div class="header-supporting">
+                                    <nav role="navigation" aria-labelledby="block-footersecondary-menu"  id="block-footersecondary">
+
+                                        <h2 class="visually-hidden" id="block-footersecondary-menu">Footer secondary</h2>
+
+                                        <ul class="secondary-footer-nav">
+                                            <li class="secondary-footer-nav-item">
+                                                <a href="/our-policies/terms-and-conditions" title="The terms and conditions of our website" data-drupal-link-system-path="node/888">Terms and conditions</a>
+                                            </li>
+                                            <li class="secondary-footer-nav-item">
+                                                <a href="/our-policies/privacy" title="Find our privacy policy " data-drupal-link-system-path="node/732">Privacy</a>
+                                            </li>
+                                            <li class="secondary-footer-nav-item">
+                                                <a href="/our-policies/cookies" title="Find out more about cookies" data-drupal-link-system-path="node/727">Cookies</a>
+                                            </li>
+                                            <li class="secondary-footer-nav-item">
+                                                <a href="/contact-us/freedom-information" title="Freedom of Information" data-drupal-link-system-path="node/726">Freedom of Information</a>
+                                            </li>
+                                        </ul>
+
+                                    </nav>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+
+        <script>
+            // Toggle class indicating that JS is enabled; used for styling purpose.
+            document.documentElement.className = document
+                .documentElement
+                .className
+                .replace(/\bno-js\b/, '') + ' js';
+        </script>
+
+        <noscript>
+            <div class="no-script alert">
+                <p>You currently have <strong>JavaScript disabled</strong> in your web browser, please <strong>enable JavaScript</strong> to view our website as intended.</p>
+                <p>
+                    <a href="http://www.enable-javascript.com/">Here are the instructions of how to enable JavaScript in your browser.</a>
+                </p>
+            </div>
+        </noscript>
+
+        <script src="{{ data['corp_site_path'] }}core/assets/vendor/domready/ready.min.js?v=1.0.8"></script>
+        <script src="{{ data['corp_site_path'] }}core/assets/vendor/jquery/jquery.min.js?v=3.2.1"></script>
+        <script src="{{ data['corp_site_path'] }}core/assets/vendor/jquery/jquery-extend-3.4.0.js?v=3.2.1"></script>
+        <script src="{{ data['corp_site_path'] }}core/misc/drupalSettingsLoader.js?v=8.7.11"></script>
+        <script src="{{ data['corp_site_path'] }}core/misc/drupal.js?v=8.7.11"></script>
+        <script src="{{ data['corp_site_path'] }}core/misc/drupal.init.js?v=8.7.11"></script>
+        <script src="{{ data['corp_site_path'] }}modules/contrib/better_exposed_filters/js/better_exposed_filters.js?v=3.x"></script>
+
+        <script type="text/javascript">
+            var isLoggedIn = false;
+        </script>
+
+        <!-- Custom JS includes -->
+        <!--[if (gte IE 10)|(!IE)]><!-->
+        <script type="text/javascript" defer="defer" src="{{ data['corp_site_path'] }}themes/custom/nhsbsa/assets/js/a.js"></script>
+        <script type="text/javascript" defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.2.1/EQCSS.min.js"></script>
+        <!--<![endif]-->
+
+        <!--[if lt IE 10]>
+        <script type="text/javascript" defer="defer" src="src="{{ data['corp_site_path'] }}themes/custom/nhsbsa/assets/js/html5shiv.js"></script>
+        <script type="text/javascript" defer="defer" src="{{ data['corp_site_path'] }}themes/custom/nhsbsa/assets/js/b.js"></script>
+
+        <script type="text/javascript">
+            // Fix to render / redraw font icons correctly in IE8
+            var head = document.getElementsByTagName('head')[0],
+                style = document.createElement('style');
+            style.type = 'text/css';
+            style.styleSheet.cssText = ':before,:after{content:none !important';
+            head.appendChild(style);
+            setTimeout(function(){
+                head.removeChild(style);
+            }, 0);
+        </script>
+    <![endif]-->
+
+    </body>
+</html>

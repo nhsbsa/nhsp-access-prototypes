@@ -1,0 +1,263 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout_corporate.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{# {% block header %}
+
+{% endblock %} #}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block main %}
+
+<article data-history-node-id="865" role="article" about="/employee-section">
+
+    <div>
+
+        <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+            <p>Depending on your circumstances, you’ll receive either a Total Reward Statement or an Annual Benefit Statement each year.</p>
+
+            <p>You can find out:</p>
+
+            <ul>
+                <li>which <a href="https://www.nhsbsa.nhs.uk/employee-section/what-type-statement-will-i-receive" title="Type of statement you'll receive">type of statement you'll receive</a>
+                </li>
+                <li>how to <a href="https://www.nhsbsa.nhs.uk/employee-section/understanding-my-statement" title="Understanding your statement">understand the information in your statement</a>
+                </li>
+            </ul>
+            <h2>View your statement</h2>
+
+            <p>There are three ways you can access your&nbsp;statement:</p>
+
+            <ul>
+                <li>using NHS Login</li>
+                <li>using GOV.UK Verify</li>
+                <li>using ESR&nbsp;Employee Self Service</li>
+            </ul>
+            <h3>
+                <a class="ckbtn" href="confirm-identity" title="Log in to TRS using Verify">Log in to&nbsp;TRS</a>
+            </h3>
+
+            <p>&nbsp;</p>
+
+            <div class="expander-wrap">
+                <h3 class="expander" tabindex="0">What NHS Login is</h3>
+
+                <div class="expander-content" style="display: none;">
+                    <p>To add</p>
+                </div>
+            </div>
+
+            <div class="expander-wrap">
+                <h3 class="expander" tabindex="0">What GOV.UK Verify is</h3>
+
+                <div class="expander-content" style="display: none;">
+                    <p>To use some digital services, the government needs to check you are who you say you are. GOV.UK Verify gives you simple access to services like checking your state pension or driving licence details.&nbsp;</p>
+
+                    <h4>It’s safe and secure</h4>
+
+                    <p>GOV.UK Verify has been developed by the Government Digital Service (GDS) and meets the highest levels of international standards for security and data protection. With GOV.UK Verify, you can be confident your identity is protected.</p>
+
+                    <p>Partner companies assure your identity. This means the government never needs to see your personal information and the partner companies never know which service you’re using.</p>
+
+                    <h4>It gives you access to services you use</h4>
+
+                    <p>You only need to register with GOV.UK Verify once. You’ll then be able to quickly and easily access government services. You’ll be able to securely log in with your username.</p>
+
+                    <h4>It’s simple to use</h4>
+
+                    <ol>
+                        <li>You’ll be asked some questions to work out which partner companies are most likely to be able to verify your identity</li>
+                        <li>You then choose from a list of carefully selected partner companies who can verify your identity</li>
+                        <li>They ask you some questions to establish it’s really you. For example, you might be asked for information about your passport or driving licence</li>
+                    </ol>
+                    <p>None of this data is seen by government or stored centrally. It’s the best way to protect your information and to keep things simple, safe and secure.</p>
+
+                    <p>There are a number of ways our partners check your identity including: driver’s licence, passport or answering a question based on your credit history.</p>
+
+                    <p>There’s <a href="https://www.gov.uk/government/publications/introducing-govuk-verify">more information about GOV.UK Verify</a> available on their website.</p>
+                </div>
+            </div>
+
+            <p>To access your TRS using ESR Self Service, log in to ESR and use&nbsp;the 'Total Reward Statement' link.</p>
+
+            <div class="expander-wrap">
+                <h3 class="expander" tabindex="0">What ESR&nbsp;Employee Self Service is</h3>
+
+                <div class="expander-content">
+                    <p style="margin:0cm 0cm 10pt">
+                        <span>
+                            <span>
+                                <span>
+                                    <span>
+                                        <span>
+                                            <span>
+                                                <span>The Electronic Staff Record (ESR) is an integrated HR and payroll system for NHS organisations in England and Wales.</span></span></span></span></span></span></span></p>
+
+                    <p style="margin:0cm 0cm 10pt">
+                        <span>
+                            <span>
+                                <span>
+                                    <span>
+                                        <a>
+                                            <span>
+                                                <span>
+                                                    <span>ESR allows NHS employees to view and maintain their personal information, and develop their professional knowledge.&nbsp; </span></span></span></a></span></span></span></span></p>
+
+                    <p style="margin:0cm 0cm 10pt">
+                        <span>
+                            <span>
+                                <span>
+                                    <span>
+                                        <span>
+                                            <span>
+                                                <span>Not all NHS Employers offer access to ESR, ask your employer if you would like more information.</span></span></span></span></span></span></span></p>
+
+                    <p style="margin:0cm 0cm 10pt">
+                        <span>
+                            <span>
+                                <span>
+                                    <span>
+                                        <span>
+                                            <span>
+                                                <span>You can get <a href="http://www.esrsupport.co.uk/TotalRewards/index.html">help with accessing your statement via ESR Employee Self Service</a></span></span></span></span></span></span></span></p>
+                </div>
+            </div>
+
+            <h2>If you have trouble accessing your TRS</h2>
+
+            <h3>Accessing your statement using NHS Login or GOV.UK Verify</h3>
+
+            <p>If you're having trouble accessing your statement using NHS Login or GOV.UK Verify, <br>telephone 0300 330 1351.</p>
+
+            <p class="MsoNormal">
+                <a href="https://www.nhsbsa.nhs.uk/contact-us/call-charges-and-phone-numbers">Find out about call charges</a>.</p>
+            <p></p>
+
+            <h3>Accessing your statement using ESR Employee Self Service</h3>
+
+            <p>
+                <span>
+                    <span>
+                        <span>
+                            <span>If you’re having trouble accessing ESR, contact your local ESR administrator for help.</span></span></span></span></p>
+
+            <div class="expander-wrap">
+                <h3 class="expander" tabindex="0">Logged in but having further problems</h3>
+
+                <div class="expander-content" style="display: none;">
+                    <h4>Haven't received a TRS Statement</h4>
+
+                    <p style="margin:0cm 0cm 10pt">
+                        <span>
+                            <span>
+                                <span>
+                                    <span>
+                                        <span>
+                                            <span>
+                                                <span>You might&nbsp;not receive a statement if:</span></span></span></span></span></span></span></p>
+
+                    <ul>
+                        <li>
+                            <a>your employer is not currently ‘live’</a>
+                        </li>
+                        <li>you are not a member of the NHS Pension Scheme</li>
+                        <li>you are a new member of the NHS Pension Scheme with less than one year’s service</li>
+                        <li>you have less than one year’s service with your current employer</li>
+                        <li>you are no longer employed by the NHS and are in receipt of your NHS Pension</li>
+                        <li>
+                            <a>your employer does not use ESR and you are not a member of the NHS Pension Scheme</a>
+                        </li>
+                    </ul>
+                    <h4>Cannot view your NHS Pension information</h4>
+
+                    <p style="margin:0cm 0cm 10pt">
+                        <span>
+                            <span>
+                                <span>
+                                    <span>
+                                        <span>
+                                            <span>
+                                                <span>Your NHS Pension information might&nbsp;not be available if&nbsp;</span></span></span></span></span></span></span>you're<span>
+                            <span>
+                                <span>
+                                    <span>
+                                        <span>
+                                            <span>
+                                                <span>:</span></span></span></span></span></span></span></p>
+
+                    <ul>
+                        <li>not a member of the NHS Pension Scheme</li>
+                        <li>a new member of the NHS Pension Scheme with less than one year’s service</li>
+                        <li>already receiving an NHS Pension</li>
+                    </ul>
+                    <p style="margin:0cm 0cm 10pt">
+                        <span>
+                            <span>
+                                <span>
+                                    <span>
+                                        <span>
+                                            <span>
+                                                <span>There may be an issue calculating you NHS Pension using the automated system. Contact your employer for an estimate of your NHS Pension benefits.</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span><br>
+&nbsp;</p>
+
+                    <h4 style="margin:0cm 0cm 10pt">Cannot view your employment information</h4>
+
+                    <p style="margin:0cm 0cm 10pt">
+                        <span>
+                            <span>
+                                <span>
+                                    <span>
+                                        <span>
+                                            <span>
+                                                <span>You might not&nbsp;be able to view your employment information if:</span></span></span></span></span></span></span></p>
+
+                    <ul>
+                        <li>y<a>our employer does not use ESR and your employment details are not available</a>
+                        </li>
+                        <li>you started your NHS employment during the current financial year, as statement information is always as at the end of the previous financial year</li>
+                        <li>bank posts are not currently included on the statements</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>Your employer will let you know when a new statement becomes available.</p>
+
+            <p>You can also find out by:</p>
+
+            <ul>
+                <li>looking out for posters about when we release statements</li>
+                <li>signing up to the <a href="/member-hub/useful-information" title="NHS Pensions Member Newsletter">NHS Pensions&nbsp;Member Newsletter</a>
+                </li>
+                <li>following&nbsp;<a href="https://twitter.com/nhs_pensions" title="@NHS_Pensions">@NHS_Pensions</a> on Twitter</li>
+            </ul>
+        </div>
+
+    </div>
+
+</article>
+
+{% endblock %}

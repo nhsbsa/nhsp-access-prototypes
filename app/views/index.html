@@ -29,70 +29,57 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <!-- Change the page title here -->
-      <h1>
-        Welcome to the {{ serviceName }} prototype
-        <span class="nhsuk-caption-m nhsuk-caption--bottom">Beta</span>
-      </h1>
+      <h1 class="nhsuk-heading-l">{{ serviceName }} prototypes</h1>
 
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+      <p><a href="https://miro.com/welcomeonboard/T7UcP31gkEGe5swR4rLn55uhI0YzsS6Xz8evnfvDD0LTCO8KPk3SabpzWGxla3IC">Complimentary user journey diagrams in Miro.</a></p>
 
-      <h2>Choose your route</h2>
-      <ul>
-        <li><a href="hub">Pension Hub</a></li>
-      </ul>
+      <hr />
 
-      <h2>Pension estimate scenarios</h2>
-      <ul>
-        <li>
-            <strong>Scheme: 1995, 2008, 2015 Specified estimate age: 58</strong><br>
-            Member of all three schemes (1995, 2008, 2015) who is younger than the minimum retirement age across all schemes and is wanting to retire before normal pension age at 58.
-            <br><a href="estimate/95-08-15-young">View estimate</a>
-        </li>
-        <li>
-          <strong>Scheme: 1995, 2008, 2015 Specified estimate age: 63</strong><br>
-            Member of all three schemes (1995, 2008, 2015) who is older than the minimum retirement age across all schemes and is wanting to retire at 60.
-            <br><a href="estimate/95-08-15-old">View estimate</a>
-        </li>
+      <h2 class="nhsuk-heading-s">1. How does a user choose the ID verification service in order to see thier total reward statements?</h2>
+      {# <p class="nhsuk-hint">We need to explore options around this.</p> #}
 
-        <li>
-          <strong>Scheme: 1995, 2015 Specified estimate age: 60</strong><br>
-          Member of two schemes (1995, 2015) who is younger than the minimum retirement age across the two schemes and is wanting to retire at 60.
-          <br><a href="estimate/95-15-young">View estimate</a>
-        </li>
-        <li>
-<<<<<<< HEAD
-          <strong>Scheme: 2015 Specified estimate age: 55</strong><br>
-          Member of 2015 only who is younger than the minimum retirement age and is wanting to retire before normal pension age (55 minimum retirement age in 2015).
-          Earliest pension age estimate.
-          <br><a href="estimate/15-earliest">View estimate</a>
-        </li>
-        <li>
-          <strong>Scheme: 2015 Specified estimate age: 61</strong><br>
-          Member of 2015 only who is older than the minimum retirement age and is wanting to retire at 61 (55 is minimum retirement age in 2015).
-          <br><a href="estimate/15-old">View estimate</a>
-=======
-          Copy and paste styles and components from the <a href="https://service-manual.nhs.uk/design-system">NHS digital service manual</a>
->>>>>>> 6c413b252cf2262e8795e0ac32e3fc335d4c6bf6
-        </li>
-      </ul>
+      {{ contentsList({
+        items: [
+          {
+            href: "1/a/home",
+            text: "a. Through a choices page in our service"
+          },
+          {
+            href: "1/a/corporate",
+            text: "The corporate website page would also need an update"
+          },
+          {
+            href: "1/b/corporate",
+            text: "b. Choose from the corporate website"
+          }
+        ]
+      }) }}
 
-      <hr>
+      <hr />
 
-      <ul>
-        {# <li><a href="/screens">View screen index</a></li> #}
-        <li>Get started with <a href="/docs">how to guides and page templates</a></li>
-        <li>Copy and paste styles and components from the <a href="https://beta.nhs.uk/service-manual/styles-components-patterns">NHS digital service manual</a></li>
-        <li>NHS.UK Frontend <a href="https://github.com/nhsuk/nhsuk-frontend">GitHub</a></li>
-      </ul>
+      <h2 class="nhsuk-heading-s">2. How does a user match thier data with ours?</h2>
+      <p class="nhsuk-hint">Once a user has registered with NHS Login or GOV.UK Verify we need to find thier
+      record in our "Known Facts" (Compendia) service.</p>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "2/a/confirm",
+            text: "a. NHS Login – Confirm National Insurance number only"
+          },
+          {
+            href: "2/b/confirm",
+            text: "b. NHS Login – Confirm National Insurance number, first name and post code"
+          },
+          {
+            href: "2/c/confirm",
+            text: "c. GOV.UK Verify – National Insurance number only"
+          }
+        ]
+      }) }}
 
       <!-- End of content -->
 
     </div>
   </div>
-{% endblock %}
-
-{% block footer %}
-
 {% endblock %}
