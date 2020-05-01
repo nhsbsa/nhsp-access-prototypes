@@ -3,57 +3,101 @@ $timeline-border-color: #005eb8;
 .bsa-timeline {
     list-style: none;
     padding: 0;
+    position: relative;
+
+    &::before,
+    &::after {
+        display: block;
+        content: ' ';
+        position: absolute;
+        background-color: $timeline-border-color;
+        width: 21px;
+        height: 3px;
+        left: -9px;
+    }
+
+    &::before {
+        top: 0;
+        
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+
     // margin: 0;
 
-    @include mq($from: desktop) {
-        display: flex;
-        margin-left: -16px;
-        margin-right: -16px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+    // @include mq($from: desktop) {
+    //     display: flex;
+    //     margin-left: -16px;
+    //     margin-right: -16px;
+    //     display: grid;
+    //     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // }
 }
 
 .bsa-timeline__entry {
     border: 0;
     border-left: 3px solid $timeline-border-color;
     margin: 0;
-    padding-left: 1em;
+    padding-left: 1.4em;
     padding-bottom: 1em;
     position: relative;
 
-    @include mq($from: desktop) {
-        // flex-grow: 0;
-        flex-basis: 33%;
-        padding-left: 0;
-        padding: 1em 16px;
-        border-left: 0;
-        border-top: 3px solid $timeline-border-color;
+    &::before {
+        background-color: $timeline-border-color;
+        content: ' ';
+        height: 3px;
+        left: 0;
+        position: absolute;
+        top: 14px;
+        width: 14px;
     }
 
     &--dash {
         border-style: dashed;
     }
 
-    &:last-child {
-        padding-bottom: 0;
+    &--warn {
+        border-style: dashed;
+        &::before {
+            content: "!";
+            background-color: white;
+            color: $timeline-border-color;
+            font-weight: bold;
+            font-size: 21px;
+            width: 40px;
+            height: 40px;
+            line-height: 36px;
+            border-radius: 100%;
+            border: 3px solid $timeline-border-color;
+            left: -21px;
+            top: 16px;
+            text-align: center;
+        }
+        &:first-child::before {
+            top: 36px;
+        }
     }
-}
 
-.bsa-timeline__entry::before {
-    background-color: $timeline-border-color;
-    content: ' ';
-    height: 3px;
-    left: 0;
-    position: absolute;
-    top: .5em;
-    width: 10px;
+    &:first-child {
+        padding-top: 40px;
 
-    @include mq($from: desktop) {
-        top: 0;
-        left: 22px;
-        height: 10px;
-        width: 3px;
+        &::before {
+            top: 54px;
+        }
+
+        &--warn::before {
+            top: 16px;
+        }
+    }
+    &:last-child {
+        padding-bottom: 40px;
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
