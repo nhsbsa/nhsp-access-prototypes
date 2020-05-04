@@ -35,7 +35,10 @@
 
       <hr />
 
-      <h2 class="nhsuk-heading-s">1. How does a user access thier total reward statements?</h2>
+      <h2 class="nhsuk-heading-s">
+        <span class="nhsuk-caption-m">(Entry)</span>
+        1. How does a user access thier total reward statements?
+      </h2>
       {# <p class="nhsuk-hint">We need to explore options around this.</p> #}
 
       {{ contentsList({
@@ -57,26 +60,53 @@
 
       <hr />
 
-      <h2 class="nhsuk-heading-s">2. How does a user match thier data with ours?</h2>
-      <p class="nhsuk-hint">Once a user has registered with NHS Login or GOV.UK Verify we need to find thier
-      record in our "Known Facts" (Compendia) service.</p>
+      <h2 class="nhsuk-heading-s">
+        <span class="nhsuk-caption-m">(Matching)</span>
+        2. How does a user match thier NHS Login data with Known Facts?
+      </h2>
+      <p class="nhsuk-hint">Once a user has registered with NHS Login we need to check if thier
+      data matches the record in our "Known Facts" (Compendia) service.</p>
 
       {{ contentsList({
         items: [
           {
             href: "2/a/nino",
-            text: "a. NHS Login – Confirm National Insurance number only"
+            text: "a. Confirm National Insurance number only"
           },
           {
             href: "2/b/confirm",
-            text: "b. NHS Login – Confirm National Insurance number, first name and post code"
-          },
-          {
-            href: "2/c/confirm",
-            text: "c. GOV.UK Verify – National Insurance number only"
+            text: "b. Confirm National Insurance number, first name and post code"
           }
         ]
       }) }}
+
+      <hr>
+
+      <h2 class="nhsuk-heading-s">
+        <span class="nhsuk-caption-m">(Matching)</span>
+        3. How does a user match thier GOV.UK Verify data with Known Facts?
+      </h2>
+      <p class="nhsuk-hint">Once a user has registered with GOV.UK Verify we need to check if thier
+      data matches the record in our "Known Facts" (Compendia) service.</p>
+      {{ contentsList({
+        items: [
+          {
+            href: "3/a/nino",
+            text: "a. Confirm National Insurance number only"
+          },
+          {
+            href: "3/b/confirm",
+            text: "b. Confirm National Insurance number, first name and post code"
+          }
+        ]
+      }) }}
+
+      <hr>
+
+      <h2 class="nhsuk-heading-s">
+        <span class="nhsuk-caption-m">(Alternates)</span>
+        4. What other access mechanisms could we use?
+      </h2>
 
       <!-- End of content -->
 

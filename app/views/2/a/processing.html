@@ -4,6 +4,8 @@
 {{ serviceName }}
 {% endblock %}
 
+{% set bodyClasses = 'theme-nhs-login' %}
+
 {% block header %}
 {{ header({
 "service": {
@@ -23,10 +25,18 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <!-- Change the page title here -->
-        <h1 class="nhsuk-heading-l">
-            We are checking your details
-        </h1>
+        <script type="text/javascript">
+          document.write('<h1 class="nhsuk-heading-l">We are checking your details</h1><p>Please wait...</p><span class="loading"></span>')
+        </script>
 
+        <noscript>
+          <h1 class="nhsuk-heading-l">Continue to next step</h1>
+          <p>Because JavaScript is not enabled on your browser, you must use the continue button.</p>
+          {{ button({
+            "text": "Continue",
+            "href": "statement"
+          }) }}
+        </noscript>
        
     </div>
   </div>

@@ -1,72 +1,110 @@
-{% extends "layout_bsa.html" %}
+{% extends "layout.html" %}
 
-{% block page_title %}
-We can&rsquo;t find you in our pension records {{ serviceName }} NHS BSA Prototype
+{% block pageTitle %}
+We can&rsquo;t find your record {{ serviceName }}
 {% endblock %}
+
+{% block header %}
+{{ header({
+"service": {
+        "name": "Total Reward Statements",
+        "href": "/"
+      },
+    "showNav": "true",
+    "showSearch": "true",
+    "classes": "nhsuk-header--white"
+  })
+}}
+{% endblock %}
+
+{% set bodyClasses = 'theme-nhs-login' %}
 
 {% block content %}
 
-<main id="content" role="main">
-    {% include "includes/phase_banner_beta.html" %}
-    {% include "includes/back-link.html" %}
-    
-    <div class="grid-row">
-      <div class="column-two-thirds">
-        <div class="heading-group">
-          <p>{{ serviceName }}</p>
-          <h1 class="heading-large">We can&rsquo;t find you in our pension records</h1>
-        </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      
+      <h1 class="nhsuk-heading-l">We can&rsquo;t find your record</h1>
 
-        <div class="notice">
-          <i class="icon icon-important">
-            <span class="visually-hidden">Warning</span>
-          </i>
-          <strong class="bold-small">
-            We need you to check and confirm these details
-          </strong>
-        </div>
+      {{ insetText({
+        "HTML": "<p>We need you to check and confirm these details.</p>"
+      }) }}
 
-        <h2 class="heading-medium"><span class="visually-hidden">Check your</span> National Insurance number:</h2>
-        <p>You entered: <strong class="bold">{{ data['nino']}}</strong></p>
+      {{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "National Insurance number"
+            },
+            value: {
+              text: "QQ 12 34 56 C"
+            }
+          },
+          {
+            key: {
+              text: "Name"
+            },
+            value: {
+              text: "Sam Jones"
+            }
+          },
+          {
+            key: {
+              text: "Date of Birth"
+            },
+            value: {
+              text: "2 April 1974"
+            }
+          }
+        ]
+      }) }}
 
-        <h2 class="heading-medium"><span class="visually-hidden">Now check your</span> Personal details:</h2>
-        <ul class="list list-bullet">
-          <li>First name: <strong class="bold">Sam</strong></li>
-          <li>Last name: <strong class="bold">Jones</strong></li>
-          <li>Date of Birth: <strong class="bold">2 April 1974</strong></li>
-        </ul>
-
-        {{ govukDetails({
-            summaryText: 'Why are my personal details here?',
-            text: "When you first accessed your NHS pension you registered with NHS Login.
-                    We use your National Insurance number and your personal details from NHS Login to find you in our pension records."
-        }) }}
+      {{ details({
+        "text": "Why are my personal details here?",
+        "HTML": "
+        <p>We use your National Insurance number and your personal details from NHS Login to find your record.</p>
+        "
+      }) }}
         
         <hr/>
 
         <form action="check" method="post">
-          <fieldset class="form-group">
-            <legend class="heading-medium">Are your details correct?</legend>
-            <div class="multiple-choice">
-              <input id="matching-nino" name="matching_details[]" type="radio" value="nino">
-              <label for="matching-nino">No, my National Insurance number is wrong</label>
-            </div>
-            <div class="multiple-choice">
-              <input id="matching-details" name="matching_details[]" type="radio" value="details">
-              <label for="matching-details">No, some of my personal details are wrong</label>
-            </div>
-            <div class="multiple-choice">
-              <input id="matching-correct" name="matching_details[]" type="radio" value="correct">
-              <label for="matching-correct">Yes, all my details are right</label>
-            </div>
-          </fieldset>
-          <div class="form-group">
-            <input class="button" type="submit" value="Next">
-          </div>
+
+            {% call fieldset({
+              legend: {
+                "text": "Are your details correct?",
+                "classes": "nhsuk-fieldset__legend--m",
+                "isPageHeading": false
+              }
+            }) %}
+
+            {{ radios({
+                "idPrefix": "matchingDetails",
+                "name": "matching-details",
+                "items": [
+              {
+                "value": "nino",
+                "text": "No, my National Insurance number is wrong"
+              },
+              {
+                "value": "details",
+                "text": "No, some of my personal details are wrong"
+              },
+              {
+                "value": "correct",
+                "text": "Yes, all of my details are correct"
+              }
+            ]
+            }) }}
+
+          {% endcall %}
+
+          {{ button({
+            "text": "Continue"
+          }) }}
         </form>
 
-      </div>
-    </div>
-</main>
 
+    </div>
+</div>
 {% endblock %}

@@ -27,7 +27,7 @@ router.post('/confirm', function (req, res) {
 })
 
 router.post('/check', function (req, res) {
-    const answer = req.session.data['matching_details'];
+    const answer = req.session.data['matching-details'];
     if (answer == 'correct') {
         res.redirect('problem')
     } else if (answer == 'nino') {

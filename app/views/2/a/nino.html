@@ -17,6 +17,8 @@ What's your National Insurance number? {{ serviceName }} NHS BSA Prototype
 }}
 {% endblock %}
 
+{% set bodyClasses = 'theme-nhs-login' %}
+
 {% block content %}
 
   <div class="nhsuk-grid-row">
@@ -24,8 +26,12 @@ What's your National Insurance number? {{ serviceName }} NHS BSA Prototype
 
       <!-- Change the page title here -->
         <h1 class="nhsuk-heading-l">
-            We need to find you in our records
+            We need to find your record
         </h1>
+
+        {{ hint({
+          "html": "We need you to confirm this information so that we <br>can find your record."
+        }) }}
 
         <form action="nino" method="post" class="form">
 

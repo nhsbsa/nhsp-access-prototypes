@@ -8,6 +8,7 @@
 @import 'components/summary-list';
 @import 'components/timeline';
 @import 'components/tag';
+@import 'components/loading';
 
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below... 
@@ -99,4 +100,11 @@
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 0;
+}
+
+/* NHS Login theme added by Gaz Joyce */
+.theme-nhs-login {
+    .nhsuk-header {
+        border-bottom: 2px solid #005eb8;
+    }
 }

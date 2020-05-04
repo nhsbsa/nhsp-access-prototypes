@@ -11,7 +11,7 @@ router.post('/confirm', function (req, res) {
     if (match.includes(answer)) {
         res.redirect('check');
     } else {
-        res.redirect('processing');
+        res.redirect('../a/processing');
     }
 })
 
