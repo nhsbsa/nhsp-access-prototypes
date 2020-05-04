@@ -1,0 +1,51 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+There&rsquo;s a problem with our pension record {{ serviceName }} NHS BSA Prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_beta.html" %}
+    {% include "includes/back-link.html" %}
+    
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <div class="heading-group">
+          <p>{{ serviceName }}</p>
+          <h1 class="heading-large">There&rsquo;s a problem with our pension record</h1>
+        </div>
+
+        <h2 class="heading-medium">We tried to find you with these details</h2>
+        <ul class="list list-bullet">
+          <li>National Insurance number: <strong class="bold">{{ data['nino']}}</strong></li>
+          <li>First name: <strong class="bold">Sam</strong></li>
+          <li>Last name: <strong class="bold">Jones</strong></li>
+          <li>Date of Birth: <strong class="bold">2 April 1974</strong></li>
+        </ul>
+        
+        <details>
+          <summary><span class="summary">Why is there a problem?</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>There are a number of reasons why there could be a problem, such as:</p>
+            <ul class="list list-bullet">
+              <li>we have out-dated information</li>
+              <li>you've got married</li>
+              <li>your employer hasn't updated your details</li>
+            </ul>
+          </div>
+        </details>
+
+        {# <hr/> #}
+
+        {% include "matching/includes/next.html" %}
+        
+        <hr class="bsa-print-hide">
+        <p class="bsa-print-hide"><a href="javascript:window.print();">Print this page</a></p>
+      </div>
+
+    </div>
+</main>
+
+{% endblock %}

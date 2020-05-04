@@ -1,0 +1,54 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+Start {{ serviceName }} NHS BSA Prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+
+    {% include "includes/phase_banner_beta.html" %}
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <div class="heading-group">
+                <p>NHS Business Services Authority</p>
+                <h1 class="heading-xlarge">{{ serviceName }}</h1>
+            </div>
+            <h2 class="heading-medium">Use this service to see:</h2>
+            <ul class="list list-bullet">
+                <li>any NHS pensions you have contributed to</li>
+                <li>a pension estimate based on different situations</li>
+                <li>dates when you could retire</li>
+                <li>lump sum amounts you could get</li>
+                <li>what your pension could be worth in the future</li>
+                <li>the personal details we hold about you</li>
+            </ul>
+            <h2 class="heading-medium">You'll need:</h2>
+            <ul class="list list-bullet">
+                <li>your National Insurance number</li>
+                <li>to sign in using NHS Login</li>
+            </ul>
+            <h2 class="heading-medium">What to do if you haven’t used NHS Login</h2>
+            <p>This takes about 5 minutes to get set up. You’ll then be able to use it to access other NHS services.</p>
+
+            <h2 class="heading-medium">What to do if your details change</h2>
+            <p>You must tell your employer of any changes to your personal details. Incorrect details can impact and delay your NHS Pension.</p>
+            
+
+            <h2 class="heading-medium">If you have recently joined</h2>
+            <p>We won't have any pension information from your employer yet, we get this information at the end of each financial year. You can
+            find out more about your pension on the <a href="https://www.nhsbsa.nhs.uk/member-hub">NHS Business Services Authority website</a>.</p>
+
+            <p>If you <a href="sign-up">sign up to our mailing list</a> we&rsquo;ll email you when your pension record is available to view.</p>
+            
+            <br>
+
+            <p><a class="button button-get-started" href="confirm-identity">Start now</a></p>
+
+        </div>
+
+    </div>
+</main>
+
+{% endblock %}

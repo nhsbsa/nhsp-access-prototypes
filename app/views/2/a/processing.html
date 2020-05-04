@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+{{ serviceName }}
+{% endblock %}
+
+{% block header %}
+{{ header({
+"service": {
+        "name": "Total Reward Statements",
+        "href": "/"
+      },
+    "showNav": "true",
+    "showSearch": "true",
+    "classes": "nhsuk-header--white"
+  })
+}}
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+        <h1 class="nhsuk-heading-l">
+            We are checking your details
+        </h1>
+
+       
+    </div>
+  </div>
+
+<script>
+window.setTimeout(function(){
+    window.location.href = "statement";
+}, 3000);
+</script>
+{% endblock %}

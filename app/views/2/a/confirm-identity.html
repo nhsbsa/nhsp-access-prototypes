@@ -1,0 +1,32 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_beta.html" %}
+    {# {% include "includes/back-link.html" %} #}
+    
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <div class="heading-group">
+            <p>{{ serviceName }}</p>
+            <h1 class="heading-large">Confirm your identity</h1>
+        </div>
+
+        <p>You need to sign in with NHS Login to access {{ serviceName }}.</p>
+        <p>If you have not used NHS Login before, it will take you about 5 minutes to get set up.</p>
+
+        <a href="login-creds" style="width:325px; display: block;">
+            <img src="/public/v6/images/SignInWith_Original@2x.png" alt="Sign in with NHS Login" style="width:100%;" />
+        </a>
+
+      </div>
+    </div>
+</main>
+
+{% endblock %}

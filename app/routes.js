@@ -8,6 +8,7 @@ const router = express.Router();
 router.use('/estimate/', require('./views/estimate/_routes'))
 
 // This moves routing to another directory
-// router.use('/1/', require('./views/1/_routes'))
+router.use('/nhs-login/', require('./views/nhs-login/_routes'))
+router.use('/2/a/', require('./views/2/a/_routes'))
 
 module.exports = router;

@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+{{ serviceName }}
+{% endblock %}
+
+{% block header %}
+{{ header({
+"service": {
+        "name": "Total Reward Statements",
+        "href": "/"
+      },
+    "showNav": "true",
+    "showSearch": "true",
+    "classes": "nhsuk-header--white"
+  })
+}}
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+
+        <form action="confirm" method="post" class="form">
+
+          {% call fieldset({
+            legend: {
+              "text": "Confirm these details",
+              "classes": "nhsuk-fieldset__legend--l",
+              "isPageHeading": true
+            }
+          }) %}
+
+            {{ hint({
+              "html": "We need you to confirm this information so that we <br>can find your record."
+            }) }}
+
+            {{ input({
+              "label": {
+                "html": "What is your first name?"
+              },
+              "id": "name",
+              "name": "name",
+              "classes": "nhsuk-input--width-20"
+            }) }}
+
+            {{ input({
+              "label": {
+                "html": "What is your post code?"
+              },
+              "id": "postcode",
+              "name": "postcode",
+              "classes": "nhsuk-input--width-10"
+            }) }}
+
+          {% set hintText %}
+            {{ hint({
+              "html": "It's on your National Insurance card, benefit letter, payslip or P60. <br>For example, ‘QQ 12 34 56 C’."
+            }) }}
+          {% endset %}
+
+            {{ input({
+              "label": {
+                "html": "What is your National Insurance number?" + hintText
+              },
+              "id": "nino",
+              "name": "nino",
+              "classes": "nhsuk-input--width-10"
+            }) }}
+
+          {% endcall %}
+
+          {{ button({
+            "text": "Continue"
+          }) }}
+
+        </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+What's your National Insurance number? {{ serviceName }} NHS BSA Prototype
+{% endblock %}
+
+{% block header %}
+{{ header({
+"service": {
+        "name": "Total Reward Statements",
+        "href": "/"
+      },
+    "showNav": "true",
+    "showSearch": "true",
+    "classes": "nhsuk-header--white"
+  })
+}}
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+        <h1 class="nhsuk-heading-l">
+            We need to find you in our records
+        </h1>
+
+        <form action="nino" method="post" class="form">
+
+          {% call fieldset({
+            legend: {
+              "text": "What's your National Insurance number?",
+              "classes": "nhsuk-fieldset__legend--s nhsuk-u-visually-hidden",
+              "isPageHeading": false
+            }
+          }) %}
+
+          {% set hintText %}
+            {{ hint({
+              "html": "It's on your National Insurance card, benefit letter, payslip or P60. <br>For example, ‘QQ 12 34 56 C’."
+            }) }}
+          {% endset %}
+
+            {{ input({
+              "label": {
+                "html": "What is your National Insurance number?" + hintText
+              },
+              "id": "nino",
+              "name": "nino",
+              "classes": "nhsuk-input--width-10"
+            }) }}
+
+          {% endcall %}
+
+          {{ button({
+            "text": "Continue"
+          }) }}
+
+        </form>
+
+    </div>
+  </div>
+{% endblock %}
