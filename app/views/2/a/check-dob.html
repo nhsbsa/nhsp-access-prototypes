@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{ serviceName }}
+{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+{% set bodyClasses = 'theme-nhs-login' %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      
+      <h1 class="nhsuk-heading-l">Check your date of birth</h1>
+
+      <p>We use your date of birth from NHS Login to find your record.</p>
+
+        {# 
+      {{ insetText({
+        "HTML": "<p>We need you to check and confirm these details.</p>"
+      }) }} #}
+
+      {{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "Date of Birth"
+            },
+            value: {
+              text: "2 April 1974"
+            }
+          }
+        ]
+      }) }}
+
+        <form action="check-dob" method="post">
+
+            {% call fieldset({
+              legend: {
+                "text": "Is your date of birth correct?",
+                "classes": "nhsuk-fieldset__legend--m",
+                "isPageHeading": false
+              }
+            }) %}
+
+            {{ radios({
+                "idPrefix": "dob",
+                "name": "dob",
+                "items": [
+              {
+                "value": "yes",
+                "text": "Yes"
+              },
+              {
+                "value": "no",
+                "text": "No"
+              }
+            ]
+            }) }}
+
+          {% endcall %}
+
+          {{ button({
+            "text": "Continue"
+          }) }}
+        </form>
+
+
+    </div>
+</div>
+{% endblock %}

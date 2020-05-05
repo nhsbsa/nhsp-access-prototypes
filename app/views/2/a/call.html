@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{ serviceName }}
+{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+{% set bodyClasses = 'theme-nhs-login' %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+    
+        {{ backLink({
+        "href": "javascript:history.go(-1)",
+        "text": "Go back"
+        }) }}
+
+        <h1 class="nhsuk-heading-l">There is a problem with your record</h1>
+
+{{ careCard({
+  "type": "non-urgent",
+  "heading": "You need to call us",
+  "HTML": "
+<ul class=\"nhsuk-list\">
+    <li>Telephone: <strong>0300 330 1346</strong></li>
+    <li>Calling from overseas: <strong>+44 191 279 0571</strong></li>
+</ul>
+<p>Monday to Friday, 8am to 6pm.</p>
+  "
+}) }}
+        
+
+
+        <p><a href="https://www.nhsbsa.nhs.uk/contact-us/call-charges-and-phone-numbers" target="_blank">Find out about call charges (opens in new window).</a></p>
+
+    </div>
+</div>
+
+{% endblock %}

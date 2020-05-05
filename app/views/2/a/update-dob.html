@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{ serviceName }}
+{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% endblock %}
+
+{% set bodyClasses = 'theme-nhs-login' %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+    
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+    }) }}
+
+      <h1 class="nhsuk-heading-l">There is a problem with your <br>date of birth</h1>
+
+      {{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "Date of Birth"
+            },
+            value: {
+              text: "2 April 1974"
+            }
+          }
+        ]
+      }) }}
+      
+      {{ insetText({
+        "HTML": "<p>You need to <a href=\"https://settings.login.nhs.uk/\">update your NHS Login details</a>.</p>"
+      }) }}
+      
+
+  </div>
+</div>
+
+{% endblock %}

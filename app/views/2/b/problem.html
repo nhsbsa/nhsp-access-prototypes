@@ -15,13 +15,14 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
     
-      {{ backLink({
-        "href": "javascript:history.go(-1)",
-        "text": "Go back"
-      }) }}
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+    }) }}
 
 
-      <h1 class="nhsuk-heading-l">There is a problem, we couldn't <br>find your record</h1>
+    <h1 class="nhsuk-heading-l">There is a problem, we couldn't <br>find your record</h1>
+
 
       <h2 class="nhsuk-heading-m">We tried to find your record with these details</h2>
 
@@ -29,26 +30,18 @@
         rows: [
           {
             key: {
-              text: "Name"
-            },
-            value: {
-              text: "Sam Jones"
-            }
-          },
-          {
-            key: {
-              text: "Post code"
-            },
-            value: {
-              text: "MW14 4WW"
-            }
-          },
-          {
-            key: {
               text: "National Insurance number"
             },
             value: {
               text: "QQ 12 34 56 C"
+            }
+          },
+          {
+            key: {
+              text: "Last name"
+            },
+            value: {
+              text: "Jones"
             }
           },
           {

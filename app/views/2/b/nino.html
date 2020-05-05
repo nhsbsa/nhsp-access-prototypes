@@ -5,16 +5,7 @@ What's your National Insurance number? {{ serviceName }} NHS BSA Prototype
 {% endblock %}
 
 {% block header %}
-{{ header({
-"service": {
-        "name": "Total Reward Statements",
-        "href": "/"
-      },
-    "showNav": "true",
-    "showSearch": "true",
-    "classes": "nhsuk-header--white"
-  })
-}}
+{% include "includes/header.html" %}
 {% endblock %}
 
 {% set bodyClasses = 'theme-nhs-login' %}
@@ -29,8 +20,9 @@ What's your National Insurance number? {{ serviceName }} NHS BSA Prototype
             We need to find your record
         </h1>
 
-        {{ hint({
-          "html": "We need you to confirm this information so that we <br>can find your record."
+        {{ insetText({
+          "HTML": "<p>You need to confirm this information so that we can find your record.</p>",
+          "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-5"
         }) }}
 
         <form action="nino" method="post" class="form">

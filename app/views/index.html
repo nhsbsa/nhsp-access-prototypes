@@ -62,20 +62,20 @@
 
       <h2 class="nhsuk-heading-s">
         <span class="nhsuk-caption-m">(Matching)</span>
-        2. How does a user match thier NHS Login data with Known Facts?
+        2. How does a user match thier NHS Login data?
       </h2>
       <p class="nhsuk-hint">Once a user has registered with NHS Login we need to check if thier
-      data matches the record in our "Known Facts" (Compendia) service.</p>
+      data matches the record in Compendia.</p>
 
       {{ contentsList({
         items: [
           {
-            href: "2/a/nino",
-            text: "a. Confirm National Insurance number only"
+            href: "2/a/",
+            text: "a. Confirm National Insurance number, first name and post code with known facts"
           },
           {
-            href: "2/b/confirm",
-            text: "b. Confirm National Insurance number, first name and post code"
+            href: "2/b/nino",
+            text: "b. Confirm National Insurance number only with DIS API"
           }
         ]
       }) }}

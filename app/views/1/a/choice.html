@@ -18,16 +18,7 @@
 {% set bodyClasses = 'theme-nhs-login' %}
 
 {% block header %}
-{{ header({
-"service": {
-        "name": "Total Reward Statements",
-        "href": "/"
-      },
-    "showNav": "true",
-    "showSearch": "true",
-    "classes": "nhsuk-header--white"
-  })
-}}
+{% include "includes/header.html" %}
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
