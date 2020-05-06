@@ -32,15 +32,16 @@
               "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-5"
             }) }}
 
-            {# {% set NameHintText %}
+
+            {% set NameHintText %}
               {{ hint({
                 "html": "Enter it as it’s written on official documents such as a passport or driving licence."
               }) }}
-            {% endset %} #}
+            {% endset %}
 
             {{ input({
               "label": {
-                "html": "What is your first name?"
+                "html": "What is your full name?" + NameHintText
               },
               "id": "name",
               "name": "name",

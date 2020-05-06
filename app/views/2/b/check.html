@@ -18,11 +18,28 @@ We can&rsquo;t find your record {{ serviceName }}
       <h1 class="nhsuk-heading-l">We can&rsquo;t find your record</h1>
 
       {{ insetText({
-        "HTML": "<p>We need you to check and confirm these details.</p>"
+        "HTML": "<p>We need you to check and confirm these details.</p>",
+        "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-5"
       }) }}
 
       {{ summaryList({
         rows: [
+          {
+            key: {
+              text: "Name"
+            },
+            value: {
+              text: "Sam Jones"
+            }
+          },
+          {
+            key: {
+              text: "Post code"
+            },
+            value: {
+              text: "MW14 4WW"
+            }
+          },
           {
             key: {
               text: "National Insurance number"
@@ -30,34 +47,9 @@ We can&rsquo;t find your record {{ serviceName }}
             value: {
               text: "QQ 12 34 56 C"
             }
-          },
-          {
-            key: {
-              text: "Last name"
-            },
-            value: {
-              text: "Jones"
-            }
-          },
-          {
-            key: {
-              text: "Date of Birth"
-            },
-            value: {
-              text: "2 April 1974"
-            }
           }
         ]
       }) }}
-
-      {{ details({
-        "text": "Why are my personal details here?",
-        "HTML": "
-        <p>We use your National Insurance number and your personal details from NHS Login to find your record.</p>
-        "
-      }) }}
-        
-        <hr/>
 
         <form action="check" method="post">
 
@@ -74,15 +66,11 @@ We can&rsquo;t find your record {{ serviceName }}
                 "name": "matching-details",
                 "items": [
               {
-                "value": "nino",
-                "text": "No, my National Insurance number is wrong"
+                "value": "no",
+                "text": "No, my details are wrong"
               },
               {
-                "value": "details",
-                "text": "No, some of my personal details are wrong"
-              },
-              {
-                "value": "correct",
+                "value": "yes",
                 "text": "Yes, all of my details are correct"
               }
             ]

@@ -18,29 +18,11 @@ We can&rsquo;t find your record {{ serviceName }}
       <h1 class="nhsuk-heading-l">We can&rsquo;t find your record</h1>
 
       {{ insetText({
-        "HTML": "<p>We need you to check and confirm these details.</p>",
-        "classes": "nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-5"
+        "HTML": "<p>We need you to check and confirm these details.</p>"
       }) }}
 
-      <h2 class="nhsuk-heading-m">Details you confirmed</h2>
       {{ summaryList({
         rows: [
-          {
-            key: {
-              text: "First name"
-            },
-            value: {
-              text: "Sam"
-            }
-          },
-          {
-            key: {
-              text: "Post code"
-            },
-            value: {
-              text: "MW14 4WW"
-            }
-          },
           {
             key: {
               text: "National Insurance number"
@@ -48,14 +30,7 @@ We can&rsquo;t find your record {{ serviceName }}
             value: {
               text: "QQ 12 34 56 C"
             }
-          }
-        ]
-      }) }}
-
-      <h2 class="nhsuk-heading-m">Details from your NHS Login</h2>
-
-      {{ summaryList({
-        rows: [
+          },
           {
             key: {
               text: "Last name"
@@ -76,14 +51,14 @@ We can&rsquo;t find your record {{ serviceName }}
       }) }}
 
       {{ details({
-        "text": "Why are my details here?",
+        "text": "Why are my personal details here?",
         "HTML": "
-        <p>We use the details you confirm and your last name and date of birth from your NHS Login to find your record.</p>
+        <p>We use your National Insurance number and your personal details from NHS Login to find your record.</p>
         "
       }) }}
+        
+        <hr/>
 
-      <hr />
-      
         <form action="check" method="post">
 
             {% call fieldset({
@@ -99,15 +74,15 @@ We can&rsquo;t find your record {{ serviceName }}
                 "name": "matching-details",
                 "items": [
               {
-                "value": "no-confirmed",
-                "text": "No, the details I confirmed are wrong"
+                "value": "nino",
+                "text": "No, my National Insurance number is wrong"
               },
               {
-                "value": "no-nhs-login",
-                "text": "No, the details from my NHS Login are wrong"
+                "value": "details",
+                "text": "No, some of my personal details are wrong"
               },
               {
-                "value": "yes",
+                "value": "correct",
                 "text": "Yes, all of my details are correct"
               }
             ]

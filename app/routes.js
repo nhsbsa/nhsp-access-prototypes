@@ -11,5 +11,6 @@ router.use('/estimate/', require('./views/estimate/_routes'))
 router.use('/nhs-login/', require('./views/nhs-login/_routes'))
 router.use('/2/a/', require('./views/2/a/_routes'))
 router.use('/2/b/', require('./views/2/b/_routes'))
+router.use('/2/c/', require('./views/2/c/_routes'))
 
 module.exports = router;

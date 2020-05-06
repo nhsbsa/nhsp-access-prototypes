@@ -29,7 +29,10 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h1 class="nhsuk-heading-l">{{ serviceName }} prototypes</h1>
+      <h1 class="nhsuk-heading-l">
+        {{ serviceName }} prototypes
+        <span class="nhsuk-caption-m">(May 2020)</span>
+      </h1>
 
       <p><a href="https://miro.com/welcomeonboard/T7UcP31gkEGe5swR4rLn55uhI0YzsS6Xz8evnfvDD0LTCO8KPk3SabpzWGxla3IC">Complimentary user journey diagrams in Miro.</a></p>
 
@@ -37,7 +40,7 @@
 
       <h2 class="nhsuk-heading-s">
         <span class="nhsuk-caption-m">(Entry)</span>
-        1. How does a user access thier total reward statements?
+        1. How does a user accessing thier Total Reward Statements via NHS Login enter the service?
       </h2>
       {# <p class="nhsuk-hint">We need to explore options around this.</p> #}
 
@@ -61,21 +64,39 @@
       <hr />
 
       <h2 class="nhsuk-heading-s">
-        <span class="nhsuk-caption-m">(Matching)</span>
-        2. How does a user match thier NHS Login data?
+        <span class="nhsuk-caption-m">(Matching with Known Facts)</span>
+        2. How does a user match thier NHS Login data with Known Facts?
       </h2>
       <p class="nhsuk-hint">Once a user has registered with NHS Login we need to check if thier
-      data matches the record in Compendia.</p>
+      data matches a record in Compendia.</p>
+
+      <p class="nhsuk-hint">NHS Login provides a users last name and date of birth (May 2020).</p>
 
       {{ contentsList({
         items: [
           {
             href: "2/a/",
-            text: "a. Confirm National Insurance number, first name and post code with known facts"
+            text: "a. Confirm National Insurance number, first name and post code"
           },
+        {
+            href: "2/b/",
+            text: "b. Check DoB, confirm National Insurance number, full name and post code"
+          }
+        ]
+      }) }}
+
+      {# <hr>
+
+      <h2 class="nhsuk-heading-s">
+        <span class="nhsuk-caption-m">(Matching with DIS API)</span>
+        3. How does a user match thier NHS Login data with DIS API?
+      </h2>
+
+      {{ contentsList({
+        items: [
           {
-            href: "2/b/nino",
-            text: "b. Confirm National Insurance number only with DIS API"
+            href: "3/a/",
+            text: "a. Confirm National Insurance number only with DIS API"
           }
         ]
       }) }}
@@ -106,7 +127,7 @@
       <h2 class="nhsuk-heading-s">
         <span class="nhsuk-caption-m">(Alternates)</span>
         4. What other access mechanisms could we use?
-      </h2>
+      </h2> #}
 
       <!-- End of content -->
 

@@ -5,22 +5,15 @@ const BASE_PATH = '/';
 const ABS_BASE_PATH = `${BASE_PATH}`;
 
 router.get('/', function (req, res) {
-    res.redirect('check-dob');
-})
-
-router.post('/check-dob', function (req, res) {
-    const answer = req.session.data['dob'];
-    if (answer === 'yes') {
-        res.redirect('confirm')
-    } else {
-        res.redirect('update-dob')
-    }
+    res.redirect('confirm');
 })
 
 router.post('/check', function (req, res) {
     const answer = req.session.data['matching-details'];
-    if (answer === 'no') {
+    if (answer === 'no-confirmed') {
         res.redirect('confirm')
+    } else if (answer === 'no-nhs-login') {
+        res.redirect('get-help')
     } else {
         res.redirect('problem')
     }
